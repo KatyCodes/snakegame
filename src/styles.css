@@ -1,0 +1,9 @@
+:root { color: #f7f3ff; background: #080d1b; font: 16px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+* { box-sizing: border-box; } body { margin: 0; padding: clamp(20px, 5vw, 60px); } main { width: min(820px, 100%); margin: auto; }
+.eyebrow, .help { color: #b8bdd7; } h1 { margin: 0; color: #c9f65a; font: 700 clamp(42px, 10vw, 88px)/1 system-ui, sans-serif; }
+.game { overflow: hidden; margin-top: 30px; border: 2px solid #edf2ff; border-radius: 12px; background: #11152f; box-shadow: 7px 7px 0 #5266c7; }
+.game:focus-visible { outline: 3px solid #c9f65a; outline-offset: 4px; } header { display: flex; flex-wrap: wrap; align-items: center; gap: 9px 16px; padding: 13px 16px; } header strong { color: #c9f65a; } header label { margin-left: auto; }
+button, select { border: 1px solid #c9f65a; border-radius: 6px; padding: 6px 10px; background: #262b50; color: #fff; font: inherit; } button { cursor: pointer; } button:hover, button:focus-visible { background: #c9f65a; color: #171b3a; }
+canvas { display: block; width: 100%; height: auto; background: #0b1027; image-rendering: pixelated; }
+.controls { display: grid; grid-template-columns: repeat(3, 44px); grid-template-areas: ". up ." "left down right"; justify-content: center; gap: 6px; padding: 13px; }.controls button { min-height: 40px; font-size: 18px; }.controls [data-direction=up] { grid-area: up; }.controls [data-direction=left] { grid-area: left; }.controls [data-direction=down] { grid-area: down; }.controls [data-direction=right] { grid-area: right; }
+@media (max-width: 560px) { header label { width: 100%; margin: 0; } canvas { min-height: 240px; } }

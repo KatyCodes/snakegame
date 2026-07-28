@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10152f">
+    <meta name="description" content="An accessible browser-based Snake game by Katy Henning.">
+    <title>Snake — KatyCodes</title>
+    <link rel="stylesheet" href="/src/styles.css">
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">katy@codes:~/games$ ./snake</p>
+      <h1>Snake</h1>
+      <p>Eat the pixels. Avoid the walls and yourself.</p>
+      <section id="game" class="game" tabindex="0" role="application" aria-label="Snake game. Use arrow keys or W A S D to steer.">
+        <header>
+          <strong id="score">score: 0</strong><span id="best">best: 0</span><span id="status" aria-live="polite">ready</span>
+          <label>speed <select id="speed" aria-label="Snake speed"><option value="160">easy</option><option value="105">medium</option><option value="65">hard</option></select></label>
+          <button id="action" type="button">start</button><button id="restart" type="button">restart</button>
+        </header>
+        <canvas id="board" width="720" height="480" aria-label="Snake game board"></canvas>
+        <div class="controls" aria-label="Direction controls">
+          <button data-direction="up" aria-label="Move up">↑</button><button data-direction="left" aria-label="Move left">←</button><button data-direction="down" aria-label="Move down">↓</button><button data-direction="right" aria-label="Move right">→</button>
+        </div>
+      </section>
+      <p class="help">Arrow keys / WASD to steer · Space to pause</p>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
